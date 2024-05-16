@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "936674843876",
+    "project_id": "syndicat-fzm",
+    "storage_bucket": "syndicat-fzm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936674843876:android:1dd4d05e9203b8a94c60f1",
+        "android_client_info": {
+          "package_name": "com.example.syndicat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOqGkhfUtxL-rTMi7TYcGGTEaCN3u5IbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

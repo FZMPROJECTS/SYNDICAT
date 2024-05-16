@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SYNDICAT</string>
+    <string name="content1">CONTENT1</string>
+    <string name="content2">CONTENT2</string>
+    <string name="content3">CONTENT3</string>
+    <string name="content4">CONTENT4</string>
+    <string name="content5">CONTENT5</string>
+    <string name="content6">CONTENT6</string>
+    <string name="logo_user">logo_user</string>
+
+</resources>
