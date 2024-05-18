@@ -5,14 +5,21 @@ public class User {
     private String email;
     private String tel;
     private String pwd;
-    private int homeNumber;
+    private String homeNumber;
 
-    public User(String username, String email, String tel, String pwd) {
+
+    public User(String email, String username, String tel, String pwd, String homeNumber) {
         this.username = username;
         this.email = email;
         this.tel = tel;
         this.pwd = pwd;
+        this.homeNumber = homeNumber;
+    }
 
+    public User(String username, String tel, String homeNumber) {
+        this.username = username;
+        this.homeNumber = homeNumber;
+        this.tel = tel;
     }
 
     public String getUsername() {
@@ -31,7 +38,7 @@ public class User {
         return pwd;
     }
 
-    public int getHomeNumber() {
+    public String getHomeNumber() {
         return homeNumber;
     }
 
@@ -51,7 +58,7 @@ public class User {
         this.pwd = pwd;
     }
 
-    public void setHomeNumber(int homeNumber) {
+    public void setHomeNumber(String homeNumber) {
         this.homeNumber = homeNumber;
     }
 }

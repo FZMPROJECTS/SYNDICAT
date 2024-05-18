@@ -1,15 +1,25 @@
 package com.example.syndicat;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.MenuItemCompat;
+import androidx.cardview.widget.CardView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Home extends AppCompatActivity {
+    FirebaseAuth auth;
+    Button btn;
+    TextView textView;
+    FirebaseUser user;
+    CardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,28 +27,34 @@ public class Home extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
 
-    }
+        auth = FirebaseAuth.getInstance();
+        btn = findViewById(R.id.logout);
+        textView= findViewById(R.id.user);
+        cardView=findViewById(R.id.card5);
+        user = auth.getCurrentUser();
+        if(user == null)
+        {
+            Intent intent=new Intent(getApplicationContext(),Authentification.class);
+            startActivity(intent);
+            finish();
+        }
+        else{
+            textView.setText(user.getEmail());
 
-   /* @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        // Actions à effectuer en fonction de l'élément du menu cliqué
-        switch (id) {
-            case R.id.menu_home:
-                // Action pour le menu "HOME"
-                Toast.makeText(this, "Home selected", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.menu_contact:
-                // Action pour le menu "CONTACT"
-                Toast.makeText(this, "Contact selected", Toast.LENGTH_SHORT).show();
-                return true;
-            case R.id.menu_signout:
-                // Action pour le menu "Logout"
-                Toast.makeText(this, "Sign out selected", Toast.LENGTH_SHORT).show();
-                return true;
         }
 
-        return super.onOptionsItemSelected(item);
-    }*/
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent=new Intent(getApplicationContext(),Authentification.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        cardView.setOnClickListener(v-> {
+            Intent intent = new Intent(Home.this,Map.class);
+            startActivity(intent);
+        });
+    }
 }

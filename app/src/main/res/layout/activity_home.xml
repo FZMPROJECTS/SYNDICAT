@@ -42,6 +42,20 @@
                 tools:ignore="HardcodeText,TextContrastCheck"
 
                 />
+            <TextView
+                android:id="@+id/user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dashboard_admin"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:text="Name"
+                android:textColor="#8BBCE3"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                tools:ignore="HardcodeText,TextContrastCheck" />
+
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -251,6 +265,17 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
             </GridLayout>
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/blue"
+                android:text="LOGOUT"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp" />
             <com.google.android.material.bottomnavigation.BottomNavigationView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"

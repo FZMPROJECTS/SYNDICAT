@@ -34,7 +34,7 @@ public class Authentification extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if (currentUser != null) {
             // Rediriger vers la page d'accueil
-            startActivity(new Intent(Authentification.this, HomePage.class));
+            startActivity(new Intent(Authentification.this, Home.class));
             finish(); // Terminer l'activité d'authentification
         }
     }
@@ -77,7 +77,7 @@ public class Authentification extends AppCompatActivity {
 
                                 if (task.isSuccessful()) {
                                     // Connexion réussie, rediriger vers la page d'accueil
-                                    startActivity(new Intent(Authentification.this, HomePage.class));
+                                    startActivity(new Intent(Authentification.this, Home.class));
                                     finish(); // Terminer l'activité d'authentification
                                 } else {
                                     // Échec de la connexion, afficher un message d'erreur
