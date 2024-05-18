@@ -49,9 +49,9 @@ public class Register extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
         mAuth = FirebaseAuth.getInstance();
-        //editTextusername=findViewById(R.id.inputUsername);
+        editTextusername=findViewById(R.id.inputusername);
         editTextemail=findViewById(R.id.inputEmail);
-        //editTexttel=findViewById(R.id.inputPhone);
+        editTexttel=findViewById(R.id.inputtel);
         editTextpwd=findViewById(R.id.inputPassword);
         //editTextpwd2=findViewById(R.id.inputConfirmPassword);
         bouttonreg=findViewById(R.id.buttonRegister);
@@ -71,27 +71,27 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
                 String username,email,tel,pwd,pwd2;
-                //username = String.valueOf(editTextusername.getText());
+                username = String.valueOf(editTextusername.getText());
                 email = String.valueOf(editTextemail.getText());
-                //tel = String.valueOf(editTexttel.getText());
+                tel = String.valueOf(editTexttel.getText());
                 pwd = String.valueOf(editTextpwd.getText());
 
                 //pwd2 = String.valueOf(editTextpwd2.getText());
-                /*if(TextUtils.isEmpty(username) )
+                if(TextUtils.isEmpty(username) )
                 {
                     Toast.makeText(Register.this,"Enter UserName",Toast.LENGTH_SHORT).show();
                     return;
-                }*/
+                }
                 if(TextUtils.isEmpty(email) )
                 {
                     Toast.makeText(Register.this,"Enter Email",Toast.LENGTH_SHORT).show();
                     return;
                 }
-               /* if(TextUtils.isEmpty(tel) )
+                if(TextUtils.isEmpty(tel) )
                 {
                     Toast.makeText(Register.this,"Enter Telephone",Toast.LENGTH_SHORT).show();
                     return;
-                }*/
+                }
                 if(TextUtils.isEmpty(pwd) )
                 {
                     Toast.makeText(Register.this,"Enter Password",Toast.LENGTH_SHORT).show();
