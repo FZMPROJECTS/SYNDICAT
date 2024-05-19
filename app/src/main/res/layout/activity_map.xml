@@ -4,7 +4,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+
+    tools:context=".Map">
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/mapView"

@@ -7,5 +7,6 @@
     <string name="content5">CONTENT5</string>
     <string name="content6">CONTENT6</string>
     <string name="logo_user">logo_user</string>
+    <string name="back_button">Back</string>
 
 </resources>
